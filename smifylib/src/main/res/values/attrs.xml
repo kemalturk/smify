@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="Smify">
+    <attr name="bgcolor" format="color" />
+    <attr name="secondcolor" format="color" />
+    <attr name="type" format="enum">
+      <enum name="type-1" value="1" />
+    </attr>
+  </declare-styleable>
+
+
+</resources>
