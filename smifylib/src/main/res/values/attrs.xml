@@ -5,7 +5,7 @@
     <attr name="bgcolor" format="color" />
     <attr name="secondcolor" format="color" />
     <attr name="type" format="enum">
-      <enum name="type-1" value="1" />
+      <enum name="type_1" value="1" />
     </attr>
   </declare-styleable>
 
