@@ -1,9 +1,6 @@
 package com.kemalturk.smifylib.faces
 
-import android.graphics.Canvas
-import android.graphics.Paint
-import android.graphics.Path
-import android.graphics.RectF
+import android.graphics.*
 import com.kemalturk.smifylib.Face
 
 class FaceType1(w: Int, h: Int, bgColor: Int, secondColor: Int): Face(w, h, bgColor, secondColor) {
@@ -51,27 +48,31 @@ class FaceType1(w: Int, h: Int, bgColor: Int, secondColor: Int): Face(w, h, bgCo
 
   private fun drawMouth(curveRadius: Int, canvas: Canvas?, paint: Paint){
 
-    println("minSide : $minSide")
 
-    val oval1 = RectF(centerW - (minSide/4), centerH + (minSide/54), centerW + (minSide/4), centerH + (minSide/6))
-    val oval2 = RectF(centerW - (minSide/4), centerH + (minSide/21.6f), centerW + (minSide/4), centerH + (minSide/9))
+    val oval1 = RectF(centerW - (minSide/4), centerH + (minSide/50), centerW + (minSide/4), centerH + (minSide/3.6f))
+    //val oval2 = RectF(centerW - (minSide/4), centerH + (minSide/21.6f), centerW + (minSide/4), centerH + (minSide/7))
+
+    val oval2 = RectF(centerW - (minSide/4), centerH + (minSide/11f), centerW + (minSide/4), centerH + (minSide/5.3f))
 
 
     val path = Path()
+    //path.fillType = Path.FillType.EVEN_ODD
     path.arcTo(oval1, 0f, 180f)
-    path.close()
+    path.addArc(oval2, 0f, 180f)
+    //path.close()
 
+/*
     val path2 = Path()
     path2.addArc(oval2, 0f, 180f)
     path2.close()
+*/
 
     canvas?.drawPath(path, paint)
-    canvas?.drawPath(path2, mBGPaint)
 
 
 
 
-
+    //canvas?.drawPath(path2, paint)
 
   }
 

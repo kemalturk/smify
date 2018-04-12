@@ -30,7 +30,7 @@ abstract class Face(width: Int, height: Int, bgColor: Int, secondColor: Int): Dr
 
     mMouthPaint.color = secondColor
     mMouthPaint.isDither = true
-    mMouthPaint.style = Paint.Style.FILL_AND_STROKE
+    mMouthPaint.style = Paint.Style.STROKE
     mMouthPaint.strokeJoin = Paint.Join.ROUND
     mMouthPaint.strokeCap = Paint.Cap.ROUND
     mMouthPaint.strokeWidth = 10f
